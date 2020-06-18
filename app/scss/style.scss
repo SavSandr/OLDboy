@@ -1,6 +1,7 @@
 @import "global";
 @import "vars";
 
+
 .header {
     position: absolute;
     z-index: 2;
@@ -15,6 +16,15 @@
     align-items: center;
     height: 80px;
     border-bottom: 2px solid $orange;
+}
+.menu__btn{
+    display: none;
+    div{
+        width: 30px;
+        height: 3px;
+        margin-bottom: 4px;
+        background-color: #fff;
+    }
 }
 .menu__list {
     li {
@@ -54,7 +64,7 @@
     color: #fff;
     margin-bottom: 40px;
     line-height: 120px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 .link {
     text-transform: uppercase;
@@ -67,8 +77,9 @@
 }
 .intro__link {
     color: #fff;
+    margin-bottom: 30px;
 }
-.about__suptitle{
+.about__suptitle {
     margin-top: 100px;
 }
 .suptitle {
@@ -78,7 +89,7 @@
     font-weight: 400;
     font-family: "Caveat", cursive;
 }
-.about__title{
+.about__title {
     margin-bottom: 40px;
 }
 .title {
@@ -87,9 +98,9 @@
     letter-spacing: 10px;
     color: $dark;
     line-height: 80px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
-.title--white{
+.title--white {
     color: #fff;
     text-align: center;
 }
@@ -103,24 +114,27 @@
     justify-content: space-between;
     margin-bottom: 100px;
     
-    &-item{
+    
+
+    &-item {
         display: flex;
-        align-items: flex-end;        
+        align-items: flex-end;
+        
+        width: 290px;
     }
-    &-number{
+    &-number {
         font-size: 50px;
         line-height: 50px;
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 700;
-        padding-right: 10px;       
+        padding-right: 10px;
     }
-    &-text{
+    &-text {
         color: $text;
         text-transform: uppercase;
-        max-width: 190px;
+        
         padding-left: 10px;
         border-left: 1px solid $dark;
-
     }
 }
 
@@ -128,7 +142,7 @@
 
 .services__head,
 .services__beard,
-.services__extra{
+.services__extra {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,18 +150,26 @@
     min-height: 700px;
     padding-top: 20px;
 }
-.services__head{
+.services__head {
     background-image: url(../images/content/bg-content2.jpg);
+   
 }
-.services__beard{
+.services__beard {
     background-image: url(../images/content/bg-content1.jpg);
+    
 }
-.services__extra{
+.services__extra {
     background-image: url(../images/content/bg-content3.jpg);
 }
+.services__box--beard {
+    top: 100px; 
+}
+.services__box--extra{
+    top: 100px;
+}
 
-.services{
-    &__box{
+.services {
+    &__box {
         background-color: $dark;
         max-width: 560px;
         width: 100%;
@@ -156,45 +178,43 @@
         position: absolute;
         right: 70px;
         border-radius: 10px;
-        &-inner{
+        &-inner {
             margin-bottom: 60px;
         }
-        
     }
-    &__title{
+    &__title {
         font-size: 18px;
         letter-spacing: 4px;
         text-transform: uppercase;
         color: $orange;
         padding: 35px 0 35px;
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 700;
         text-align: center;
     }
-    &__line{
+    &__line {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    &__text{
+    &__text {
         line-height: 20px;
         color: $text;
         max-width: 330px;
+        padding-right: 10px;
     }
-    &__price{
+    &__price {
         color: #e3e3e3;
         font-weight: 400;
     }
-
 }
 
 // ! services end
 
-
 // ! team start
 
-.team__title{
+.team__title {
     margin: 100px 0 60px;
     text-align: center;
 }
@@ -207,8 +227,8 @@
 .team__img {
     background: linear-gradient(to bottom, #181818, #181818);
     width: 270px;
-    transition: all .5s;
-    img{
+    transition: all 0.5s;
+    img {
         display: block;
         width: 100%;
     }
@@ -218,23 +238,23 @@
     width: 270px;
     background-color: $orange;
     position: relative;
-    transition: all .5s;
-    &:hover{
-        .team__img{
-            transform: translate3d(-10px,-10px,0);
-            img{
+    transition: all 0.5s;
+    &:hover {
+        .team__img {
+            transform: translate3d(-10px, -10px, 0);
+            img {
                 opacity: 0.3;
             }
         }
-        .team__social{
+        .team__social {
             opacity: 1;
         }
-        .team__text{
+        .team__text {
             opacity: 1;
         }
     }
 }
-.team__link + .team__link{
+.team__link + .team__link {
     margin-left: 20px;
 }
 
@@ -244,25 +264,23 @@
     left: 50%;
     transform: translate(-25%);
     bottom: 90px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #fff;
     font-size: 28px;
     width: 100%;
-    
 }
 .team__social {
-    transition: all .5s;
+    transition: all 0.5s;
     opacity: 0;
     position: absolute;
     width: 100%;
     bottom: 30px;
     display: flex;
     justify-content: center;
-    svg{
-        
-        g{
+    svg {
+        g {
             fill: $orange;
         }
     }
@@ -270,24 +288,148 @@
 
 // ! team end
 
-
-.contacts__title{
-    margin-bottom: 80px;
-    text-align: center; 
+// ! contacts start
+.contacts{
+    margin-bottom: 300px;
 }
-
-.contacts__mup{
+.contacts__title {
+    margin-bottom: 80px;
+    text-align: center;
+}
+.contacts__mup {
     position: relative;
 }
-.contacts__box{
+.contacts__box {
     position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    &-logo {
+        margin-bottom: 20px;
+    }
+}
+.contacts__box-info {
+    background-color: $dark;
+    width: 450px;
+    padding: 65px 130px 65px 65px;
+    color: $text;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.contacts__box-tel {
+    color: $text;
+    margin-bottom: 20px;
+}
+.contacts__box-mail {
+    color: $orange;
+}
+.contacts__box-adress {
+    line-height: 24px;
+    max-width: 170px;
+    margin-bottom: 20px;
+}
+
+.contacts__box-form {
+    background-color: $text;
+    width: 450px;
+    padding: 65px 45px;
+    form {
+        max-width: 310px;
+        width: 100%;
+        input {
+            display: inline-block;
+            margin-left: 20px;
+            width: 100%;
+            height: 40px;
+            padding: 9px 15px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            color: $dark;
+            font-style: italic;
+
+            &::placeholder {
+                color: #acacac;
+                font-style: italic;
+            }
+        }
+        button {
+            display: block;
+            background-color: $orange;
+            border: none;
+            border-radius: 10px;
+            width: 120px;
+            padding: 9px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $dark;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+    }
+}
+.contacts__box-title {
+    color: $dark;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 30px;
+}
+.contacts__link{
+    font-size: 14px;
+    width: 160px;
+}
+.contacts__box-img {
+    min-width: 40px;
+    height: 40px;
+    background-color: $orange;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        g {
+            fill: $text;
+        }
+    }
+}
+.contacts__box-inner{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+// ! contacts end
+
+//! footer start
+.footer{
+    background-color: $dark;
+    padding: 30px 0;
+}
+.footer__social{
     display: flex;
 }
-.contacts__box-text{
-    background-color: $dark;
-    width: 350px;
+.footer__item{
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
 }
-.contacts__box-form{
-    background-color: $text;
-    width: 350px;
+.footer__text{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 5px;
+    color: $text;
 }
+.footer__img{
+    svg{
+        g{
+            fill: $orange;
+        }
+    }
+}
+
+//! footer end
+
+@import "media";
